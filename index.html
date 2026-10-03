@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>My Todo</h1>
+                <p id="subtitle">Let's get things done</p>
+            </header>
+
+            <div class="progress"><div id="bar"></div></div>
+
+            <div class="add-row">
+                <input type="text" placeholder="Add your todo here" id="inp-todo" autocomplete="off">
+                <button class="btn-add" onclick="Add()" aria-label="Add todo">
+                    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+            </div>
+
+            <div class="filters">
+                <button class="active" data-f="all">All</button>
+                <button data-f="active">Active</button>
+                <button data-f="done">Done</button>
+                <span class="pill" id="pill"></span>
+            </div>
+
+            <ul id="taskList"></ul>
+            <div class="empty" id="empty">
+                <div class="emoji">✨</div>
+                <p>Nothing here yet</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
